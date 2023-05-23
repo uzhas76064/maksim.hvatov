@@ -21,6 +21,10 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
+
+      // inset: {
+      //   'top-34': '3px',
+      // }
     },
   },
   plugins: [],
