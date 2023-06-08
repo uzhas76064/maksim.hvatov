@@ -7,7 +7,6 @@ import {styles} from "../styels.js";
 import {experiences} from "../constants/index.js";
 import {SectionWrapper} from "../hoc/index.js";
 import {textVariant} from "../utils/motion.js";
-import React from "react";
 
 // eslint-disable-next-line react/prop-types
 const ExperienceCard = ({experience}) => {
@@ -18,7 +17,7 @@ const ExperienceCard = ({experience}) => {
           date={experience.date}
           iconStyle={{background: experience.iconBg}}
           icon={
-            <div>
+            <div className="flex justify-center items-center w-full h-full">
               <img src={experience.icon} alt={experience.company_name} className="w-[60%] h-[60%] object-contain"/>
             </div>
           }>
@@ -50,4 +49,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default SectionWrapper(Experience, "experience")
